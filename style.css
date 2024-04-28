@@ -1,3 +1,42 @@
-#container{
-    background-color: cyan;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid lightgray !important;
+}
+
+.nav-items>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items>ul>li {
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 70px;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid lightgray !important;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
