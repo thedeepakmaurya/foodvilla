@@ -29,7 +29,7 @@ const Body = () => {
 
     if(!allRestaurants) return  null;
 
-    if (filteredRestaurants.length === 0) return <h1>No restaurant match your search!!</h1>
+    // if (filteredRestaurants.length === 0) return <h1>No restaurant match your search!!</h1>
 
     return allRestaurants.length === 0 ? (<Shimmer />) : (
         <>

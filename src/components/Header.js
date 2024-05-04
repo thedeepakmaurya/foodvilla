@@ -1,8 +1,9 @@
 import { useState } from "react";
+import Logo from "../assets/img/villa.jpg";
 
 const Title = () => {
     return (
-        <a href='/'><img className='logo' alt='logo' src="https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_300,q_100,fl_lossy,dpr_2.0,c_fit,f_auto,h_300/kehzqzlsccbtkwqx7ckf" /></a>
+        <a href='/'><img className='logo' alt='logo' src={Logo} /></a>
     )
 }
 
