@@ -70,3 +70,7 @@
     padding: 10px;
     margin: 10px;
  }
+
+.menu{
+    display: flex;
+}
