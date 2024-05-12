@@ -5,13 +5,13 @@ import Shimmer from "./Shimmer";
 
 
 const RestaurantMenu = () => {
-    const { resId } = useParams();
-    const {restaurant, items} = useRestaurant(resId); 
+    const { id } = useParams();
+    const {restaurant, items} = useRestaurant(id); 
 
     return (!restaurant) ? <Shimmer /> : (
         <div className="menu">
             <div>
-                <h1>Restaurant id : {resId}</h1>
+                <h1>Restaurant id : {id}</h1>
                 <h2>{restaurant?.cards[0]?.card?.card?.text}</h2>
                 <img src={IMG_CDN_URL + restaurant?.cards[2]?.card?.card?.info?.cloudinaryImageId} />
                 <h3>{restaurant?.cards[2]?.card?.card?.info?.areaName}</h3>
