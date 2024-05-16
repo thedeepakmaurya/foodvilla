@@ -1,7 +1,9 @@
 import { useState, useContext } from "react";
 import Logo from "../assets/img/villa.png";
 import { Link } from "react-router-dom"
-import userContext from "../utils/userContext"
+// import userContext from "../utils/userContext"
+import { useSelector } from "react-redux";
+import store from "../utils/store";
 
 const Title = () => {
     return (
@@ -13,7 +15,9 @@ const Header = () => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const {user} = useContext(userContext);
+    // const {user} = useContext(userContext);
+
+    const cartItems = useSelector(store => store.cart.items)
 
     return (
         <div className='flex justify-between bg-amber-100'>
@@ -23,11 +27,11 @@ const Header = () => {
                     <li className="px-2"> <Link to="/">Home</Link></li>
                     <li className="px-2"><Link to="/about">About</Link></li>
                     <li className="px-2"><Link to="/contact">Contact</Link></li>
-                    <li className="px-2">Cart</li>
                     <li className="px-2"><Link to="/instamart">Instamart</Link></li>
+                    <li className="px-2"><Link to="/cart">Cart - {cartItems.length} items</Link></li>
                 </ul>
             </div>
-            {user.name}
+            {/* {user.name} */}
             {
                 isLoggedIn ? <button className="p-10" onClick={() => setIsLoggedIn(false)}>Logout</button> : <button className="p-10" onClick={() => setIsLoggedIn(true)}> Login</button>
             }

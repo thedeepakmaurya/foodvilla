@@ -15,7 +15,7 @@ const useRestaurant = (id) => {
         const json = await data.json();
         setRestaurant(json?.data);
         setItems(json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-        console.log(json?.data)
+        console.log(json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
     }
 
     return {restaurant, items};
