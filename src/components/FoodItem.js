@@ -1,6 +1,6 @@
 import { MENU_IMG_CDN_URL } from '../config';
 
-const FoodItem = ({ item}) => {
+const FoodItem = ({ item }) => {
 
 
     return (
