@@ -22,11 +22,11 @@ class Profile extends React.Component {
     }
 
     componentDidUpdate(){
-
+        console.log("componentDidUpdate")
     }
 
     componentWillUnmount(){
-        
+
     }
 
     render() {
