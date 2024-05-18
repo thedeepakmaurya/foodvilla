@@ -1,14 +1,22 @@
-import { Outlet } from "react-router-dom";
+import Profile from "./Profile";
+import React from "react";
+class About extends React.Component {
+    constructor(props) {
+        super(props);
 
+    }
 
-const About = () => {
-    return (
-        <div>
-            <h1>About Us Page</h1>
-            <p> This is React Live</p>
-            <Outlet />
-        </div>
-    )
+    componentDidMount() {
+        
+    }
+
+    render() {
+        return (
+            <div>
+                <Profile name={"Deepak Maurya"} />
+            </div>
+        )
+    }
 }
 
 export default About;
