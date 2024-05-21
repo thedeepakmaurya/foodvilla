@@ -28,9 +28,9 @@ const RestaurantMenu = () => {
             </div>
             <div>
                 <h1 className="font-bold text-xl mb-2">Menu</h1>
-                <ul>
+                <ul data-testid="menu">
                     {Array.isArray(items) && items.map((item) => (
-                        <li className="list-decimal" key={item.card.info.id}>{item.card.info.name} - <button className="p-1 bg-green-50" onClick={() => addFoodItem(item)}>Add</button></li>))}
+                        <li className="list-decimal" key={item.card.info.id}>{item.card.info.name} - <button data-testid="addBtn" className="p-1 bg-green-50" onClick={() => addFoodItem(item)}>Add</button></li>))}
                 </ul>
             </div>
         </div>

@@ -38,7 +38,7 @@ const Body = () => {
     return allRestaurants.length === 0 ? (<Shimmer />) : (
         <>
             <div className="flex p-5 mb-10 bg-amber-100 justify-center items-center">
-                <input
+                <input data-testid = "search-input"
                     type="text"
                     className="bg-red-800 placeholder:text-white p-2 m-2 w-96 outline-none text-white rounded-md"
                     placeholder="Search for restaurants"
